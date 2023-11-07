@@ -1,5 +1,6 @@
 import {useRef} from "react";
 import {Editor} from "@tinymce/tinymce-react";
+import { Button } from 'antd'
 
 export default function TinyMCEDemo() {
   const editorRef = useRef(null);
@@ -21,8 +22,8 @@ export default function TinyMCEDemo() {
         tinymceScriptSrc={
           "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/js/libs/tinymce/tinymce.min.js"
         }
-				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-				// @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue="<p>This is the initial content of the editor.</p>"
         onChange={handleChange}
@@ -54,7 +55,14 @@ export default function TinyMCEDemo() {
             "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
         }}
       />
-      <button onClick={log}>Log editor content</button>
+      <div className="flex items-center mt-5">
+        <Button type="primary" onClick={log}>
+          打印 Editor 内容
+        </Button>
+				<div className="ml-4">
+					请打开控制台查看输出。
+				</div>
+      </div>
     </>
   );
 }

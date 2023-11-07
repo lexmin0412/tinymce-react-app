@@ -1,6 +1,7 @@
 import { useRequest } from 'ahooks'
 import { Button, message } from 'antd'
 import { Link } from 'react-router-dom'
+import TinyMCEDemo from '../tinymce-demo';
 
 function Home() {
 	const {
@@ -22,28 +23,10 @@ function Home() {
   );
 
   return (
-    <>
-      <div className="m-3">
-        <Button loading={fetchLoading} onClick={handleFakeFetch}>
-          点击请求
-        </Button>
-      </div>
-      <div className="m-3">
-        <Button>
-          <Link to="/about">路由切换</Link>
-        </Button>
-      </div>
-      <div className="m-3">
-        <Button>
-          <Link to="/antd-demo">AntD Demo</Link>
-        </Button>
-      </div>
-      <div className="m-3">
-        <Button>
-          <Link to="/tinymce-demo">TinyMCE Demo</Link>
-        </Button>
-      </div>
-    </>
+    <div className='p-5'>
+			<div className='text-3xl font-bold mb-4'>TinyMCE 示例</div>
+      <TinyMCEDemo />
+    </div>
   );
 }
 
