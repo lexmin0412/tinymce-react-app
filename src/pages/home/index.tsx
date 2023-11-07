@@ -1,5 +1,6 @@
 import { useRequest } from 'ahooks'
 import { Button, message } from 'antd'
+import { Link } from 'react-router-dom'
 
 function Home() {
 	const {
@@ -29,17 +30,17 @@ function Home() {
       </div>
       <div className="m-3">
         <Button>
-          <a href="/tinymce-react-app/about">路由切换</a>
+          <Link to="/about">路由切换</Link>
         </Button>
       </div>
       <div className="m-3">
         <Button>
-          <a href="/tinymce-react-app/antd-demo">AntD Demo</a>
+          <Link to="/antd-demo">AntD Demo</Link>
         </Button>
       </div>
       <div className="m-3">
         <Button>
-          <a href="/tinymce-react-app/tinymce-demo">TinyMCE Demo</a>
+          <Link to="/tinymce-demo">TinyMCE Demo</Link>
         </Button>
       </div>
     </>
