@@ -1,15 +1,17 @@
-import React, {useRef} from "react";
+import {useRef} from "react";
 import {Editor} from "@tinymce/tinymce-react";
 
 export default function TinyMCEDemo() {
   const editorRef = useRef(null);
   const log = () => {
     if (editorRef.current) {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
       console.log(editorRef.current.getContent());
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: unknown) => {
     console.log("handleChange", e);
   };
 
@@ -19,6 +21,8 @@ export default function TinyMCEDemo() {
         tinymceScriptSrc={
           "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/js/libs/tinymce/tinymce.min.js"
         }
+				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+				// @ts-ignore
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue="<p>This is the initial content of the editor.</p>"
         onChange={handleChange}
