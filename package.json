@@ -1,5 +1,5 @@
 {
-  "name": "react-template",
+  "name": "tinymce-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@tinymce/tinymce-react": "^4.3.0",
     "ahooks": "^3.7.8",
     "antd": "^5.8.3",
     "dayjs": "^1.11.9",

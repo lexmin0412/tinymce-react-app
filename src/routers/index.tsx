@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import Home from "../pages/home";
 import AntdDemo from "../pages/antd-demo";
+import TinyMCEDemo from '../pages/tinymce-demo'
 
 const router = createBrowserRouter(
   [
@@ -14,6 +15,10 @@ const router = createBrowserRouter(
     {
       path: "/antd-demo",
       element: <AntdDemo />,
+    },
+    {
+      path: "/tinymce-demo",
+      element: <TinyMCEDemo />,
     },
     {
       path: "/about",
@@ -30,7 +35,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/react-template/",
+    basename: "/tinymce-react-app/",
   }
 );
 

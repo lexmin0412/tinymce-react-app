@@ -1,4 +1,4 @@
-name: Deploy Rspress site to Pages
+name: Deploy TinyMCE React APP to Pages
 
 on:
   push:
